@@ -51,11 +51,13 @@ def generer_pdf_depuis_url(url_rapport_json: str) -> str:
 
 
     # Générer le résumé avec Ollama
-    if os.environ.get("CI") == "true":
+    # Générer le résumé avec Ollama
+if os.environ.get("CI") == "true":
     resume = "Résumé fictif généré pour les tests CI"
 else:
     llm = Ollama(model="mistral")
     resume = llm(prompt)
+
 
     # Charger le template HTML
     with open("template.html", "r", encoding="utf-8") as f:
