@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Simplified report</title>
+    <style>
+        body { font-family: sans-serif; padding: 30px; background-color: #f5f5f5; }
+        .block { padding: 15px; margin-bottom: 10px; border-left: 5px solid #4CAF50; background: white; }
+    </style>
+</head>
+<body>
+    <h1>Simplified report - Audit Lighthouse</h1>
+    <div class="block">🟠 Performance : {{ perf }}/100</div>
+    <div class="block">🟢 Accessibility : {{ access }}/100</div>
+    <div class="block">🟡 SEO : {{ seo }}/100</div>
+    <div class="block">🟢 Best practices : {{ best }}/100</div>
+    <h2>📸 Screenshot of the page </h2>
+<img src="{{ screenshot }}" alt="Capture d’écran" style="max-width: 100%; border: 2px solid #ccc; border-radius: 10px; margin-top: 10px;">
+
+    <h2>Resume</h2>
+    <p>{{ texte }}</p>
+</body>
+</html>
