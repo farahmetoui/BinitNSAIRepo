@@ -30,6 +30,6 @@ jobs:
       - name: Run Flask with mocked Ollama
         run: |
          export CI=true
-         python app.py &
+         python main.py &
          sleep 5
          curl -f http://localhost:5001/generer-pdf || echo "skip if no body"
