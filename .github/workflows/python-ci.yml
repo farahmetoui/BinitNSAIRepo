@@ -32,4 +32,5 @@ jobs:
          export CI=true
          python main.py &
          sleep 5
-         curl -X POST http://localhost:5001/generer-pdf || exit 1 
+         curl -X POST http://localhost:5001/generer-pdf -H "Content-Type: application/json" -d '{}' || exit 1
+
