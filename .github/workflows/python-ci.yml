@@ -32,4 +32,4 @@ jobs:
          export CI=true
          python main.py &
          sleep 5
-         curl -f http://localhost:5001/generer-pdf || echo "skip if no body"
+         curl -X POST http://localhost:5001/generer-pdf || exit 1 
